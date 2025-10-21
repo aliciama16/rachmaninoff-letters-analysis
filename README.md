@@ -1,6 +1,6 @@
 # We Contain Multitudes: Rachmaninoff’s Letters and Emotional Networks
 
-This repository explores Sergei Rachmaninoff’s correspondence through a digital-humanities and musicological lens, connecting textual sentiment, emotional tone, and historical context with his creative output, focused on *Piano Concerto No. 2*. The project uses a structured CSV dataset of translated letters (1890s–1910s) to examine patterns of mood, professional exchange, and personal reflection, combining qualitative reading with computational text analysis.
+This repository explores Sergei Rachmaninoff’s correspondence through a digital-humanities and musicological lens, connecting textual sentiment, emotional tone, and historical context with his creative output, focused on *Piano Concerto No. 2*. Through this project I wanted to ask: <i>Can computational methods reveal the emotional cadence within Rachmaninoff’s personal letters or do they only trace the shadows of what he felt?</i> The project uses a structured CSV dataset of translated letters (1890s–1910s) leading up to his composition of *Piano Concerto No. 2* to examine patterns of mood, professional exchange, and personal reflection, combining qualitative reading with computational text analysis.
 
 ## Dataset
 
@@ -33,9 +33,9 @@ I manually created this datasheet from this Rachmaninoff letter archive online. 
 **File:** `rachmaninoff_elements.csv`
 | Column | Description | Example |
 |--------|--------------|---------|
-| `label` | The name of the node that appears in the network. For people, this is the correspondent’s name (e.g., “A. K. Glazunov”); for emotional nodes, this is the assigned mood (e.g., “melancholy”). |
-| `type` | Defines the category of the node. In this dataset, nodes are classified as either Person (correspondents) or Tone (emotional categories). |
-| `image` | A link to an image representing the node. For Person nodes, this is a historical portrait or Wikimedia image; for Tone nodes, it’s a color gradient chosen to visually represent the emotion. |
+| `label` | The name of the node that appears in the network. For people, this is the correspondent’s name (e.g., “A. K. Glazunov”); for emotional nodes, this is the assigned mood (e.g., “melancholy”). | A. K. Glazunov |
+| `type` | Defines the category of the node. In this dataset, nodes are classified as either Person (correspondents) or Tone (emotional categories). | Person |
+| `image` | A link to an image representing the node. For Person nodes, this is a historical portrait or Wikimedia image; for Tone nodes, it’s a color gradient chosen to visually represent the emotion. | 
 | `description` | A short biographical or contextual note displayed when the node is opened in Kumu. For Tone nodes, this field is blank |
 <br>
 <br>
@@ -50,18 +50,5 @@ I manually created this datasheet from this Rachmaninoff letter archive online. 
 | `type` | In Kumu, the 'type' field defines the nature of the connection between two nodes. In this dataset, every connection represents a letter, so all entries in this column are labeled "letter". This ensures Kumu recognizes all edges as part of the same network layer. | letter |
 
 <br>
-
-## Methods
-
-Analytical notebooks (Python / Google Colab):
-
-- **Text analysis:** tokenization, sentiment scoring, keyword frequency  
-- **Network visualization:** mapping relationships between correspondents  
-- **Emotional mapping:** e.g. plotting “valence” over time  
-- **Audio connection:** comparing letter moods to harmonic/melodic tension in *Piano Concerto No. 2*
-
-## Interpretation
-
-This project asks: *Can computational methods reveal the emotional cadence within Rachmaninoff’s personal letters or do they only trace the shadows of what he felt?*
 
 
